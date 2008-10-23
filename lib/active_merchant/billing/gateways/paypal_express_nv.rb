@@ -64,6 +64,7 @@ module ActiveMerchant #:nodoc:
         add_pair(post, :token, options[:token]) if options[:token]
         add_pair(post, :locale, options[:locale]) if options[:locale]
         add_shipping_address(post, options[:shipping_address]) if options[:shipping_address]
+        add_line_items(post, options[:line_items]) if options[:line_items]
         post
       end
 
